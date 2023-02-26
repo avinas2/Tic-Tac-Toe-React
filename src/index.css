@@ -1,10 +1,29 @@
 body {
     font: 14px "Century Gothic", Futura, sans-serif;
-    margin: 20px;
+    margin: 0;
+    padding: 0;
+    background-color: #292929;
+    color: #fff;
+  }
+  h1{
+    text-align: center;
+    font-size: 50px;
+    font-weight: bolder;
+  }
+  .game-board {
+    margin: 0 auto;
+    width: 600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
   }
   
   ol, ul {
     padding-left: 30px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
   }
   
   .board-row:after {
@@ -15,37 +34,109 @@ body {
   
   .status {
     margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 18px;
+    letter-spacing: 2px;
   }
-  
+
   .square {
     background: #fff;
-    border: 1px solid #999;
+    border: 2px solid #00b0ff;
     float: left;
-    font-size: 24px;
+    font-size: 110px;
     font-weight: bold;
-    line-height: 34px;
-    height: 34px;
-    margin-right: -1px;
-    margin-top: -1px;
+    line-height: 150px;
+    height: 150px;
+    margin-right: -2px;
+    margin-top: -2px;
     padding: 0;
     text-align: center;
-    width: 34px;
+    width: 150px;
+    transition: all 0.3s ease;
   }
   
-  .square:focus {
+  .square:hover {
     outline: none;
+    border-color: #fff;
+    box-shadow: 0 0 10px #00b0ff;
   }
   
   .kbd-navigation .square:focus {
-    background: #ddd;
-  }
-  
-  .game {
-    display: flex;
-    flex-direction: row;
+    background: #00b0ff;
+    color: #fff;
   }
   
   .game-info {
     margin-left: 20px;
+    text-align: center;
   }
   
+  @media only screen and (max-width: 768px) {
+    .game-board {
+      width: 100%;
+    }
+    
+    .game-info {
+      margin-left: 0;
+      margin-top: 20px;
+      width: 100%;
+    }
+  }
+  .button {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;
+    background-color: #00b0ff;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 10px;
+    width: 150px;
+}
+  
+  .button:hover {
+    background-color: #0096d6;
+    box-shadow: 0 0 10px rgba(0, 176, 255, 0.5);
+  }
+  li{
+    margin-left: 3rem;
+    font-size: 30px;
+  }
+  .status{
+    font-size: 30px;
+    margin: 10px;
+    text-align: center;
+  }
+  .restart{
+    text-align: center;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;
+    background-color: #ffae00;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 5px;
+    width: 150px;
+  }
+  .restart:hover{
+    text-align: center;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;
+    background-color: #d39714;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 5px;
+    width: 150px;
+  }
